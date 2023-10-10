@@ -1,0 +1,8 @@
+{
+    "maven.view": "flat",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "ZooSim-162/src/opencsv-3.8.jar"
+    ]
+}

@@ -1,11 +1,10 @@
 import java.util.Scanner;
 import java.io.File;
-import java.net.URI;
 
 public class App {
     static String[] animalNames;
     static String[] animalSpecies;
-    static int[] animalAges;
+    static String[] animalAges;
     static String[] animalHabitats;
     static int zooSize;
 
@@ -15,11 +14,12 @@ public class App {
         System.out.println("1) Blank Zoo \n2) Autogenerate Zoo \n3) Load Zoo from CSV\n4) Exit");
         Scanner scanscan = new Scanner(System.in);
         boolean valid = false;
+        boolean open = true;
         if (scanscan.hasNextInt()) {
             switch(scanscan.nextInt()) {
                 case 1:
+                    System.out.println("Enter the size of your zoo:");
                     while(!valid) {
-                        System.out.println("Enter the size of your zoo:");
                         scanscan.nextLine();
                         if (scanscan.hasNextInt()) {
                             int inp = scanscan.nextInt();
@@ -31,8 +31,8 @@ public class App {
                     }
                     break;
                 case 2:
+                    System.out.println("Enter the size of your zoo:");
                     while(!valid) {
-                        System.out.println("Enter the size of your zoo:");
                         scanscan.nextLine();
                         if (scanscan.hasNextInt()) {
                             int inp = scanscan.nextInt();
@@ -45,6 +45,8 @@ public class App {
                     break;
                 case 3:
                     System.out.println("Place Zoo.CSV in directory on the same level as App.java\nPress enter to continue");
+                    File csv = new File("./Zoo.csv");
+
                 case 4:
                     scanscan.close();
                     System.exit(0);
@@ -55,22 +57,48 @@ public class App {
             }
         } else {
             System.err.println("Not a valid integer");
+            scanscan.close();
+            System.exit(0);
         };
+        System.out.println("Welcome to your zoo!");
+        while (open = true) {
+            System.out.println("1) Search animal\n2) Add animal\n3) Remove animal\n4) Edit animal\n5) Display full zoo\n6) Save to CSV\n7) Exit");
+            if (scanscan.hasNextInt()) {
+                switch (scanscan.nextInt()) {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        }
     }
 
     public static void createZoo(int zooSize) {
-        //Attributes
-        // - Name
-        // - Species
-        // - Ages
-        // - Habitats
         animalNames = new String[zooSize];
         animalSpecies = new String[zooSize];
-        animalAges = new int[zooSize];
+        animalAges = new String[zooSize];
         animalHabitats = new String[zooSize];
     };
 
     public static void randZoo(String[] names, String[] species, int[] ages, String[] habitats) {
 
     };
+
+    public static void bubbleCorresponding(String[] ref, String[] sort0, String[] sort1, String[] sort2) {
+
+    }
 }
