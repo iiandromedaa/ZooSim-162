@@ -4,5 +4,6 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "ZooSim-162/src/opencsv-3.8.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
