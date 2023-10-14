@@ -18,7 +18,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("=-=-=-= ZooSim =-=-=-=");
         System.out.println("The world's most mediocre digital zoo!");
-        System.out.print("1) Blank Zoo \n2) Autogenerate Zoo \n3) Load Zoo from CSV\n4) Exit");
+        System.out.print("1) Blank Zoo \n2) Autogenerate Zoo \n3) Load Zoo from CSV (Not implemented)\n4) Exit");
         switch(intLoopScan("", 4, 3)) {
             case 1:
                 int val = intLoopScan("Enter the size of your zoo.", 0, 1);
@@ -31,6 +31,7 @@ public class App {
                 break;
             case 3:
                 System.out.println("Place Zoo.CSV in directory on the same level as App.java (src folder)\nPress enter to continue");
+                scanscan.next();
                 File csv = new File("./Zoo.csv");
                 break;
             case 4:
@@ -143,6 +144,7 @@ public class App {
                     }
                     break;
                 case 6:
+                    CSVHelper.export();
                     break;
                 case 7:
                     scanscan.close();
