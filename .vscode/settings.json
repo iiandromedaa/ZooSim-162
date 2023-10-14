@@ -3,7 +3,8 @@
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "ZooSim-162/src/opencsv-3.8.jar"
+        "ZooSim-162/src/opencsv-3.8.jar",
+        "ZooSim-162/src/opencsv-5.8.jar"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
